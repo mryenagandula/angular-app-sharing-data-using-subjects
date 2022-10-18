@@ -1,0 +1,15 @@
+<div *ngIf="usersDetails" class="mt-3">
+    <h1>Hi {{usersDetails.firstName | titlecase}} {{usersDetails.secondName | titlecase}}</h1>
+    <p>Username : @{{usersDetails.userName}}</p>
+    <p>Mobile : {{usersDetails.mobile}}</p>
+    <p>DOB : {{usersDetails.dob}}</p>
+    <p>Email Address : {{usersDetails.email}}</p>
+    <p>Email Verified : {{usersDetails.email_Verified ? "Yes" : "No"}}</p>
+    <p>Account Enabled : {{usersDetails.activated ? "Yes" : "No"}}</p>
+    <p>Gender : {{usersDetails.gender}}</p>
+    <p>Updated At: {{usersDetails.updatedAt | date:'medium'}}</p>
+    <p>Created At: {{usersDetails.createdAt | date:'medium'}}</p>
+</div>
+<div *ngIf="!usersDetails">
+    <h5 style="color: red;">OOPS!!! User Not Selected, Please Select Any User</h5>
+</div>
